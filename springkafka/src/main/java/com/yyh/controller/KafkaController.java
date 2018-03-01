@@ -23,6 +23,7 @@ public class KafkaController {
             @PathVariable final String topic) {
         logger.info("start sned message to {}",topic);
         ListenableFuture<SendResult<String, String>> listenableFuture = kafkaTemplate.send(topic,message);
+
         listenableFuture.addCallback(
                 result -> logger.info("send message to {} success",topic),
                 ex -> logger.info("send message to {} failure,error message:{}",topic,ex.getMessage()));
@@ -33,6 +34,5 @@ public class KafkaController {
         logger.info("start send message to default topic");
         kafkaTemplate.sendDefault("你好，世界");
     }
-
 
 }

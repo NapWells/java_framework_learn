@@ -72,7 +72,7 @@ public class KafkaConfig {
 
     //实际执行消息消费的类
     @Bean
-    public MyMessageListener kafkaConsumerService(){
+    public MyMessageListener myMessageListener(){
         return new MyMessageListener();
     }
 
@@ -81,7 +81,7 @@ public class KafkaConfig {
     public ContainerProperties containerProperties(){
         Pattern topicPattern = Pattern.compile(".*[tT]opic.*");
         ContainerProperties containerProperties = new ContainerProperties(topicPattern);
-        containerProperties.setMessageListener(kafkaConsumerService());
+        containerProperties.setMessageListener(myMessageListener());
         return containerProperties;
     }
 
@@ -98,7 +98,5 @@ public class KafkaConfig {
         kafkaTemplate.setDefaultTopic("defaultTopic");
         return kafkaTemplate;
     }
-
-
 
 }
