@@ -8,19 +8,15 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class KafkaController {
-
     private final static Logger logger = LoggerFactory.getLogger(KafkaController.class);
-
 
     @Autowired
     private  KafkaTemplate<String,String> kafkaTemplate;
 
-
-    @RequestMapping(value = "/foo/send",method = RequestMethod.GET)
-    public void sendMeessage() {
-        logger.info("start sned message to bar topic");
-        kafkaTemplate.send("foo","hello","world");
+    @RequestMapping(value = "/{topic}/send",method = RequestMethod.GET)
+    public void sendMeessageTotopic1(@PathVariable String topic,@RequestParam(value = "partition",defaultValue = "0") int partition) {
+        logger.info("start send message to {}",topic);
+        kafkaTemplate.send(topic,partition,"你","好");
     }
-
 
 }
