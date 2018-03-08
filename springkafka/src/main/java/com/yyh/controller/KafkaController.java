@@ -35,4 +35,5 @@ public class KafkaController {
         kafkaTemplate.sendDefault("你好，世界");
     }
 
+
 }

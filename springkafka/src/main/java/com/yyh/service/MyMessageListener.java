@@ -17,4 +17,5 @@ public class MyMessageListener implements MessageListener<String, String> {
         logger.info("get message from {} topic : {}", topic, data.value());
     }
 
+
 }
