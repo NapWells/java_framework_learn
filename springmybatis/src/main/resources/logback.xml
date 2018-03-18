@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d{MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+
+    <!-- 输出终端是滚动文件 -->
+    <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 基于时间滚动，就是每天的日志输出到不同的文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 输出日志的目录文件名，window中默认分区为当前程序的硬盘分区，%d{yyyy-MM-dd}是当前日期 -->
+            <fileNamePattern>/Users/lhy/java-study/java_framework_learn/springmybatis/log/warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 最大保存99个文件，超出的历史文件会被删除 -->
+            <maxHistory>99</maxHistory>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+        <!-- 按照日志级别进行过滤 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- 只收集WARN级别的日志，其他高级别和低级别的日志都放弃 -->
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 除了filter，其他 配置和上面一样， 只是name和文件路径不同-->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/Users/lhy/java-study/java_framework_learn/springmybatis/log/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>99</maxHistory>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+
+        </rollingPolicy>
+        <!-- 阈值过滤器 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <!-- 收集ERROR及ERROR以上级别的日志 -->
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="WARN_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+</configuration>

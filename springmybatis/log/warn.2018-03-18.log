@@ -1,0 +1,826 @@
+22:56:29.898 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1000 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+22:56:29.904 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+22:56:29.968 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10a9d961: startup date [Sun Mar 18 22:56:29 CST 2018]; root of context hierarchy
+22:56:32.509 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+22:56:32.527 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:56:32.537 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:56:32.537 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+22:56:32.543 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+22:56:32.691 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:56:32.691 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2723 ms
+22:56:32.954 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+22:56:32.961 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+22:56:32.961 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22:56:32.961 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22:56:32.962 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+22:56:33.302 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+22:56:33.344 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+22:56:34.793 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10a9d961: startup date [Sun Mar 18 22:56:29 CST 2018]; root of context hierarchy
+22:56:35.107 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+22:56:35.109 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+22:56:35.109 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+22:56:35.110 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course/]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+22:56:35.119 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+22:56:35.120 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+22:56:35.205 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:56:35.206 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:56:35.281 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:56:35.839 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+22:56:35.864 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:56:35.887 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+22:56:35.915 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+22:56:35.919 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 6.725 seconds (JVM running for 9.469)
+22:56:45.467 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+22:56:45.467 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+22:56:45.487 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+22:56:45.606 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ufzgylv8ss6wf|4e1ce44, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ufzgylv8ss6wf|4e1ce44, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+22:58:00.533 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@10a9d961: startup date [Sun Mar 18 22:56:29 CST 2018]; root of context hierarchy
+22:58:00.538 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+22:58:05.738 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1009 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+22:58:05.760 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+22:58:05.951 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4f0100a7: startup date [Sun Mar 18 22:58:05 CST 2018]; root of context hierarchy
+22:58:07.654 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+22:58:07.669 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:58:07.678 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:58:07.679 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+22:58:07.683 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+22:58:07.775 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:58:07.775 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1824 ms
+22:58:07.933 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+22:58:07.943 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+22:58:07.943 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22:58:07.944 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22:58:07.944 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+22:58:08.139 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+22:58:08.189 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+22:58:08.804 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4f0100a7: startup date [Sun Mar 18 22:58:05 CST 2018]; root of context hierarchy
+22:58:08.878 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+22:58:08.879 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+22:58:08.880 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+22:58:08.880 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+22:58:08.884 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+22:58:08.885 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+22:58:08.933 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:08.933 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:08.981 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:09.373 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+22:58:09.388 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:58:09.408 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+22:58:09.424 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+22:58:09.428 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.348 seconds (JVM running for 6.026)
+22:58:12.193 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+22:58:12.193 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+22:58:12.212 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+22:58:37.713 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4f0100a7: startup date [Sun Mar 18 22:58:05 CST 2018]; root of context hierarchy
+22:58:37.717 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+22:58:43.055 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1013 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+22:58:43.063 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+22:58:43.189 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 22:58:43 CST 2018]; root of context hierarchy
+22:58:45.294 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+22:58:45.308 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:58:45.318 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:58:45.318 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+22:58:45.323 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+22:58:45.450 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:58:45.450 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2262 ms
+22:58:45.817 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+22:58:45.826 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+22:58:45.827 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+22:58:45.827 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+22:58:45.827 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+22:58:46.041 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+22:58:46.090 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+22:58:46.837 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 22:58:43 CST 2018]; root of context hierarchy
+22:58:46.988 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+22:58:46.991 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+22:58:46.992 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+22:58:46.993 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+22:58:47.004 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+22:58:47.006 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+22:58:47.256 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:47.256 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:47.322 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+22:58:47.650 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+22:58:47.665 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:58:47.686 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+22:58:47.704 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+22:58:47.708 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 5.632 seconds (JVM running for 7.116)
+22:58:52.420 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+22:58:52.420 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+22:58:52.441 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+23:00:46.063 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 22:58:43 CST 2018]; root of context hierarchy
+23:00:46.068 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:01:08.999 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1022 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:01:09.005 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:01:09.120 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:01:09 CST 2018]; root of context hierarchy
+23:01:10.578 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:01:10.590 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:01:10.598 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:01:10.598 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:01:10.603 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:01:10.687 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:01:10.687 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1567 ms
+23:01:10.816 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:01:10.822 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:01:10.823 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:01:10.824 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:01:10.824 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:01:11.013 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:01:11.055 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:01:11.647 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:01:09 CST 2018]; root of context hierarchy
+23:01:11.714 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:01:11.715 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:01:11.716 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:01:11.716 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:01:11.720 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:01:11.721 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:01:11.769 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:01:11.769 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:01:11.818 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:01:12.185 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:01:12.200 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:01:12.223 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:01:12.240 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:01:12.243 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 3.993 seconds (JVM running for 5.3)
+23:01:15.144 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:01:15.145 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:01:15.163 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+23:01:15.258 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ufzmww44dd4n|16872c4d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ufzmww44dd4n|16872c4d, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:03:41.709 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:01:09 CST 2018]; root of context hierarchy
+23:03:41.714 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:03:47.313 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1030 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:03:47.325 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:03:47.424 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3adcc812: startup date [Sun Mar 18 23:03:47 CST 2018]; root of context hierarchy
+23:03:49.209 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:03:49.232 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:03:49.248 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:03:49.248 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:03:49.258 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:03:49.352 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:03:49.352 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1928 ms
+23:03:49.542 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:03:49.547 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:03:49.547 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:03:49.547 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:03:49.548 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:03:49.719 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:03:49.748 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:03:50.621 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3adcc812: startup date [Sun Mar 18 23:03:47 CST 2018]; root of context hierarchy
+23:03:50.792 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:03:50.799 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:03:50.804 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:03:50.805 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:03:50.820 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:03:50.821 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:03:50.901 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:03:50.901 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:03:50.965 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:03:51.294 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:03:51.310 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:03:51.332 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:03:51.351 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:03:51.354 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.768 seconds (JVM running for 6.069)
+23:03:52.287 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:03:52.288 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:03:52.309 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+23:03:52.401 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ufzqbcbbsn9bp|2ec3633f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ufzqbcbbsn9bp|2ec3633f, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:10:03.284 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3adcc812: startup date [Sun Mar 18 23:03:47 CST 2018]; root of context hierarchy
+23:10:03.288 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:10:08.519 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1062 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:10:08.528 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:10:08.595 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ae9cfc1: startup date [Sun Mar 18 23:10:08 CST 2018]; root of context hierarchy
+23:10:10.408 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:10:10.424 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:10:10.435 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:10:10.435 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:10:10.440 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:10:10.534 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:10:10.535 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1940 ms
+23:10:10.853 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:10:10.881 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:10:10.882 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:10:10.882 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:10:10.882 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:10:11.109 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:10:11.183 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:10:12.153 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ae9cfc1: startup date [Sun Mar 18 23:10:08 CST 2018]; root of context hierarchy
+23:10:12.296 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:10:12.296 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:10:12.297 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:10:12.297 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:10:12.302 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:10:12.303 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:10:12.361 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:12.361 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:12.418 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:12.748 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:10:12.763 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:10:12.783 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:10:12.798 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:10:12.802 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.991 seconds (JVM running for 6.511)
+23:10:13.326 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:10:13.327 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:10:13.383 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 56 ms
+23:10:26.169 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ae9cfc1: startup date [Sun Mar 18 23:10:08 CST 2018]; root of context hierarchy
+23:10:26.174 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:10:41.181 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1066 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:10:41.191 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:10:41.325 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49cb9cb5: startup date [Sun Mar 18 23:10:41 CST 2018]; root of context hierarchy
+23:10:43.286 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:10:43.301 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:10:43.311 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:10:43.312 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:10:43.317 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:10:43.412 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:10:43.413 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2089 ms
+23:10:43.582 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:10:43.588 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:10:43.589 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:10:43.589 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:10:43.589 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:10:43.770 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:10:43.809 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:10:44.455 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49cb9cb5: startup date [Sun Mar 18 23:10:41 CST 2018]; root of context hierarchy
+23:10:44.532 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:10:44.541 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:10:44.545 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:10:44.546 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:10:44.554 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:10:44.556 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:10:44.613 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:44.613 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:44.669 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:10:45.040 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:10:45.059 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:10:45.080 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:10:45.096 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:10:45.100 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.63 seconds (JVM running for 6.017)
+23:10:48.711 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:10:48.714 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:10:48.733 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+23:10:48.838 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ufzz6tt1eprsix|5a237731, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ufzz6tt1eprsix|5a237731, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:12:59.580 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@49cb9cb5: startup date [Sun Mar 18 23:10:41 CST 2018]; root of context hierarchy
+23:12:59.585 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:13:04.852 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1079 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:13:04.858 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:13:04.951 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:13:04 CST 2018]; root of context hierarchy
+23:13:06.965 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:13:07.017 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:13:07.028 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:13:07.029 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:13:07.040 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:13:07.184 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:13:07.184 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2233 ms
+23:13:07.473 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:13:07.481 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:13:07.482 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:13:07.482 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:13:07.482 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:13:07.676 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:13:07.719 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:13:08.461 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:13:04 CST 2018]; root of context hierarchy
+23:13:08.537 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:13:08.538 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:13:08.539 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:13:08.539 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:13:08.544 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:13:08.545 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:13:08.606 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:13:08.606 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:13:08.665 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:13:09.034 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:13:09.049 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:13:09.069 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:13:09.088 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:13:09.092 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 5.045 seconds (JVM running for 6.379)
+23:13:11.483 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:13:11.483 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:13:11.504 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+23:13:11.601 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug029vbv1zvgq|11f406f8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug029vbv1zvgq|11f406f8, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:16:38.000 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:13:04 CST 2018]; root of context hierarchy
+23:16:38.006 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:16:42.970 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1088 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:16:42.978 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:16:43.056 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35432107: startup date [Sun Mar 18 23:16:43 CST 2018]; root of context hierarchy
+23:16:44.727 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:16:44.742 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:16:44.751 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:16:44.751 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:16:44.756 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:16:44.848 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:16:44.848 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1793 ms
+23:16:44.996 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:16:45.004 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:16:45.005 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:16:45.005 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:16:45.005 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:16:45.177 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:16:45.212 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:16:45.877 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35432107: startup date [Sun Mar 18 23:16:43 CST 2018]; root of context hierarchy
+23:16:45.951 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:16:45.952 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:16:45.953 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:16:45.953 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:16:45.958 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:16:45.959 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:16:46.011 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:16:46.011 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:16:46.058 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:16:46.455 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:16:46.470 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:16:46.490 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:16:46.507 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:16:46.511 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.279 seconds (JVM running for 5.61)
+23:16:52.568 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:16:52.569 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:16:52.589 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+23:18:47.540 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35432107: startup date [Sun Mar 18 23:16:43 CST 2018]; root of context hierarchy
+23:18:47.545 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:18:55.173 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1094 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:18:55.182 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:18:55.472 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a2d131d: startup date [Sun Mar 18 23:18:55 CST 2018]; root of context hierarchy
+23:18:57.564 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:18:57.593 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:18:57.612 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:18:57.613 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:18:57.629 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:18:57.790 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:18:57.791 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2319 ms
+23:18:57.927 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:18:57.932 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:18:57.932 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:18:57.932 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:18:57.933 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:18:58.124 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:18:58.155 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:18:58.934 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a2d131d: startup date [Sun Mar 18 23:18:55 CST 2018]; root of context hierarchy
+23:18:59.056 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:18:59.059 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:18:59.060 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:18:59.061 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:18:59.071 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:18:59.072 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:18:59.166 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:18:59.166 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:18:59.233 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:18:59.571 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:18:59.587 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:18:59.623 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:18:59.654 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:18:59.662 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 5.618 seconds (JVM running for 7.068)
+23:18:59.998 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:18:59.998 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:19:00.035 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+23:19:00.162 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug09s9t148jsvq|6a9b9909, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug09s9t148jsvq|6a9b9909, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:22:28.927 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5a2d131d: startup date [Sun Mar 18 23:18:55 CST 2018]; root of context hierarchy
+23:22:28.931 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:22:35.432 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1101 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:22:35.440 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:22:35.507 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:22:35 CST 2018]; root of context hierarchy
+23:22:37.188 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:22:37.201 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:22:37.210 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:22:37.210 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:22:37.215 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:22:37.282 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:22:37.283 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1776 ms
+23:22:37.455 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:22:37.463 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:22:37.464 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:22:37.465 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:22:37.465 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:22:37.743 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:22:37.782 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:22:38.459 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:22:35 CST 2018]; root of context hierarchy
+23:22:38.532 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:22:38.533 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:22:38.533 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:22:38.533 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:22:38.544 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:22:38.545 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:22:38.596 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:22:38.597 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:22:38.651 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:22:39.083 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:22:39.098 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:22:39.118 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:22:39.134 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:22:39.138 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.416 seconds (JVM running for 5.823)
+23:22:46.440 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:22:46.440 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:22:46.458 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+23:22:46.542 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0ehqk1f5z5r3|72825400, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0ehqk1f5z5r3|72825400, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:24:59.279 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@141e5bef: startup date [Sun Mar 18 23:22:35 CST 2018]; root of context hierarchy
+23:24:59.284 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:25:54.078 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1109 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:25:54.099 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:25:54.167 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1800a575: startup date [Sun Mar 18 23:25:54 CST 2018]; root of context hierarchy
+23:25:55.874 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:25:55.887 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:25:55.896 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:25:55.896 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:25:55.901 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:25:55.971 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:25:55.971 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1804 ms
+23:25:56.129 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:25:56.133 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:25:56.134 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:25:56.134 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:25:56.134 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:25:56.319 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:25:56.359 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:25:56.908 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1800a575: startup date [Sun Mar 18 23:25:54 CST 2018]; root of context hierarchy
+23:25:56.976 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:25:56.977 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:25:56.977 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:25:56.978 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:25:56.983 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:25:56.984 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:25:57.056 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:25:57.056 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:25:57.113 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:25:57.552 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:25:57.566 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:25:57.585 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:25:57.602 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:25:57.606 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.24 seconds (JVM running for 5.861)
+23:26:02.583 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:26:02.584 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:26:02.603 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+23:26:02.788 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0iqyi1yyek31|1866da85, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0iqyi1yyek31|1866da85, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:28:07.025 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1800a575: startup date [Sun Mar 18 23:25:54 CST 2018]; root of context hierarchy
+23:28:07.032 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:28:12.305 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1371 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:28:12.314 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:28:12.396 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b7c4869: startup date [Sun Mar 18 23:28:12 CST 2018]; root of context hierarchy
+23:28:14.349 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:28:14.364 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:28:14.373 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:28:14.374 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:28:14.379 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:28:14.488 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:28:14.488 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2092 ms
+23:28:14.653 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:28:14.660 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:28:14.660 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:28:14.660 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:28:14.660 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:28:14.828 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:28:14.860 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:28:15.467 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b7c4869: startup date [Sun Mar 18 23:28:12 CST 2018]; root of context hierarchy
+23:28:15.539 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:28:15.541 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:28:15.541 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:28:15.542 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:28:15.549 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:28:15.550 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:28:15.601 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:15.601 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:15.651 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:16.026 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:28:16.040 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:28:16.064 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:28:16.079 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:28:16.083 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.471 seconds (JVM running for 5.856)
+23:28:20.708 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:28:20.708 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:28:20.727 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+23:28:20.838 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0lptt1jk4lyz|474c9131, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0lptt1jk4lyz|474c9131, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:28:41.559 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@b7c4869: startup date [Sun Mar 18 23:28:12 CST 2018]; root of context hierarchy
+23:28:41.564 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:28:46.149 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1376 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:28:46.155 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:28:46.326 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:28:46 CST 2018]; root of context hierarchy
+23:28:48.134 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:28:48.149 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:28:48.159 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:28:48.160 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:28:48.164 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:28:48.258 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:28:48.258 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1932 ms
+23:28:48.428 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:28:48.432 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:28:48.432 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:28:48.432 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:28:48.432 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:28:48.609 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:28:48.642 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:28:49.239 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:28:46 CST 2018]; root of context hierarchy
+23:28:49.323 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:28:49.324 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:28:49.324 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:28:49.324 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:28:49.329 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:28:49.330 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:28:49.378 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:49.378 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:49.426 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:28:49.786 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:28:49.800 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:28:49.821 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:28:49.836 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:28:49.839 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.312 seconds (JVM running for 5.593)
+23:28:56.537 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:28:56.538 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:28:56.557 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+23:28:56.648 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0mfw41nl8scw|71b6d77f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0mfw41nl8scw|71b6d77f, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:29:26.166 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f19ac19: startup date [Sun Mar 18 23:28:46 CST 2018]; root of context hierarchy
+23:29:26.170 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:29:31.071 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1381 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:29:31.086 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:29:31.212 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@82ea68c: startup date [Sun Mar 18 23:29:31 CST 2018]; root of context hierarchy
+23:29:33.337 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:29:33.358 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:29:33.370 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:29:33.371 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:29:33.377 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:29:33.466 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:29:33.466 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2254 ms
+23:29:33.709 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:29:33.714 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:29:33.715 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:29:33.715 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:29:33.715 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:29:33.935 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:29:33.984 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:29:34.548 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@82ea68c: startup date [Sun Mar 18 23:29:31 CST 2018]; root of context hierarchy
+23:29:34.638 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:29:34.640 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:29:34.640 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:29:34.641 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:29:34.646 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:29:34.647 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:29:34.718 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:29:34.718 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:29:34.783 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:29:35.200 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:29:35.215 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:29:35.235 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:29:35.264 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:29:35.268 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.919 seconds (JVM running for 6.122)
+23:29:41.194 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:29:41.194 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:29:41.214 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+23:29:41.299 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0nevky859da|212dfd39, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0nevky859da|212dfd39, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:32:13.069 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@82ea68c: startup date [Sun Mar 18 23:29:31 CST 2018]; root of context hierarchy
+23:32:13.075 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:32:17.615 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1394 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:32:17.623 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:32:17.742 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1115ec15: startup date [Sun Mar 18 23:32:17 CST 2018]; root of context hierarchy
+23:32:19.727 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:32:19.743 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:32:19.753 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:32:19.753 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:32:19.758 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:32:19.852 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:32:19.853 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2111 ms
+23:32:20.042 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:32:20.048 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:32:20.048 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:32:20.048 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:32:20.048 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:32:20.284 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:32:20.344 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:32:21.026 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1115ec15: startup date [Sun Mar 18 23:32:17 CST 2018]; root of context hierarchy
+23:32:21.193 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:32:21.194 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:32:21.194 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:32:21.195 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:32:21.204 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:32:21.211 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:32:21.323 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:21.323 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:21.420 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:21.813 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:32:21.829 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:32:21.853 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:32:21.871 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:32:21.875 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 5.045 seconds (JVM running for 6.225)
+23:32:22.890 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:32:22.890 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:32:22.911 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+23:32:23.006 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0qz8dldr54x|119c745c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0qz8dldr54x|119c745c, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:32:49.570 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1115ec15: startup date [Sun Mar 18 23:32:17 CST 2018]; root of context hierarchy
+23:32:49.586 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:32:54.289 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1398 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:32:54.299 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:32:54.447 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1458ed9c: startup date [Sun Mar 18 23:32:54 CST 2018]; root of context hierarchy
+23:32:56.282 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:32:56.296 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:32:56.305 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:32:56.305 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:32:56.310 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:32:56.425 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:32:56.425 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1978 ms
+23:32:56.636 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:32:56.641 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:32:56.642 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:32:56.642 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:32:56.642 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:32:56.814 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:32:56.869 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:32:57.496 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1458ed9c: startup date [Sun Mar 18 23:32:54 CST 2018]; root of context hierarchy
+23:32:57.566 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:32:57.567 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:32:57.567 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:32:57.567 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:32:57.572 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:32:57.573 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:32:57.623 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:57.623 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:57.672 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:32:58.051 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:32:58.065 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:32:58.085 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:32:58.100 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:32:58.104 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.56 seconds (JVM running for 5.961)
+23:33:02.325 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:33:02.325 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:33:02.346 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+23:33:02.463 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0rrf91kmzqzm|6ba7383d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0rrf91kmzqzm|6ba7383d, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:33:20.044 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1458ed9c: startup date [Sun Mar 18 23:32:54 CST 2018]; root of context hierarchy
+23:33:20.052 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:33:24.974 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1402 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:33:24.987 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:33:25.161 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3abada5a: startup date [Sun Mar 18 23:33:25 CST 2018]; root of context hierarchy
+23:33:26.847 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:33:26.862 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:33:26.870 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:33:26.870 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:33:26.875 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:33:26.965 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:33:26.965 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1805 ms
+23:33:27.122 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:33:27.130 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:33:27.130 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:33:27.131 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:33:27.131 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:33:27.314 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:33:27.352 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:33:28.023 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3abada5a: startup date [Sun Mar 18 23:33:25 CST 2018]; root of context hierarchy
+23:33:28.099 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:33:28.099 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:33:28.100 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:33:28.100 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:33:28.105 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:33:28.106 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:33:28.162 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:28.162 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:28.212 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:28.585 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:33:28.600 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:33:28.621 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:33:28.637 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:33:28.641 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.38 seconds (JVM running for 5.738)
+23:33:42.626 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3abada5a: startup date [Sun Mar 18 23:33:25 CST 2018]; root of context hierarchy
+23:33:42.631 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:33:51.837 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1406 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:33:51.843 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:33:52.034 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 23:33:52 CST 2018]; root of context hierarchy
+23:33:54.187 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:33:54.202 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:33:54.212 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:33:54.213 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:33:54.218 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:33:54.318 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:33:54.318 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2285 ms
+23:33:54.553 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:33:54.558 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:33:54.559 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:33:54.559 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:33:54.559 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:33:54.787 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:33:54.832 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:33:55.506 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 23:33:52 CST 2018]; root of context hierarchy
+23:33:55.594 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:33:55.595 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:33:55.596 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:33:55.596 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:33:55.604 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:33:55.605 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:33:55.673 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:55.673 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:55.771 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:33:56.248 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:33:56.277 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:33:56.318 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:33:56.341 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:33:56.345 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 5.178 seconds (JVM running for 6.479)
+23:33:57.367 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:33:57.367 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:33:57.389 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+23:33:57.482 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0t05g1o5qs46|238bfd6c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0t05g1o5qs46|238bfd6c, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:36:02.196 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@a4add54: startup date [Sun Mar 18 23:33:52 CST 2018]; root of context hierarchy
+23:36:02.202 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:36:06.560 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1414 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:36:06.565 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:36:06.649 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14dd9eb7: startup date [Sun Mar 18 23:36:06 CST 2018]; root of context hierarchy
+23:36:08.118 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:36:08.129 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:36:08.137 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:36:08.137 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:36:08.141 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:36:08.203 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:36:08.203 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1554 ms
+23:36:08.304 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:36:08.307 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:36:08.308 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:36:08.308 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:36:08.308 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:36:08.483 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:36:08.506 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:36:08.914 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14dd9eb7: startup date [Sun Mar 18 23:36:06 CST 2018]; root of context hierarchy
+23:36:08.960 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:36:08.961 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:36:08.961 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:36:08.961 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:36:08.965 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:36:08.966 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:36:08.996 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:36:08.996 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:36:09.027 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:36:09.252 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:36:09.265 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:36:09.289 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:36:09.300 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:36:09.303 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 3.264 seconds (JVM running for 4.433)
+23:36:18.838 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:36:18.843 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:36:18.857 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+23:36:18.917 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug0vvaqq4ni7f|9257031, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug0vvaqq4ni7f|9257031, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:40:06.637 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@14dd9eb7: startup date [Sun Mar 18 23:36:06 CST 2018]; root of context hierarchy
+23:40:06.640 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:40:11.457 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1426 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:40:11.462 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:40:11.548 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158da8e: startup date [Sun Mar 18 23:40:11 CST 2018]; root of context hierarchy
+23:40:13.430 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:40:13.443 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:40:13.453 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:40:13.454 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:40:13.458 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:40:13.537 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:40:13.537 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1989 ms
+23:40:13.709 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:40:13.714 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:40:13.714 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:40:13.714 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:40:13.715 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:40:13.866 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:40:13.890 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:40:14.487 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158da8e: startup date [Sun Mar 18 23:40:11 CST 2018]; root of context hierarchy
+23:40:14.573 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:40:14.573 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:40:14.574 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:40:14.574 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:40:14.581 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:40:14.583 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:40:14.645 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:40:14.647 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:40:14.713 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:40:14.997 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:40:15.015 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:40:15.043 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:40:15.057 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:40:15.061 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 4.23 seconds (JVM running for 5.434)
+23:40:16.013 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:40:16.013 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:40:16.033 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+23:40:16.119 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug114mz1m0dkza|450794b4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug114mz1m0dkza|450794b4, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+23:44:58.085 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158da8e: startup date [Sun Mar 18 23:40:11 CST 2018]; root of context hierarchy
+23:44:58.090 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+23:45:02.312 INFO  com.yyh.AppDemoMain - Starting AppDemoMain on lhys-MacBook-Pro.local with PID 1440 (/Users/lhy/java-study/java_framework_learn/springmybatis/target/classes started by lhy in /Users/lhy/java-study/java_framework_learn/springmybatis)
+23:45:02.322 INFO  com.yyh.AppDemoMain - No active profile set, falling back to default profiles: default
+23:45:02.456 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42e99e4a: startup date [Sun Mar 18 23:45:02 CST 2018]; root of context hierarchy
+23:45:03.952 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+23:45:03.964 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:45:03.971 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:45:03.971 INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.28
+23:45:03.975 INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/lhy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+23:45:04.050 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:45:04.051 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1595 ms
+23:45:04.165 INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+23:45:04.171 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+23:45:04.172 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+23:45:04.172 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+23:45:04.173 INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+23:45:04.335 INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+23:45:04.358 INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+23:45:04.794 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@42e99e4a: startup date [Sun Mar 18 23:45:02 CST 2018]; root of context hierarchy
+23:45:04.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/add/course],methods=[POST]}" onto public int com.yyh.controller.MyController.addCurse(com.yyh.dto.Course)
+23:45:04.853 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/{id}]}" onto public com.yyh.dto.Student com.yyh.controller.MyController.queryStudentById(int)
+23:45:04.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/student/all]}" onto public java.util.List<com.yyh.dto.Student> com.yyh.controller.MyController.queryAllStudent()
+23:45:04.854 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/query/course]}" onto public java.util.List<com.yyh.dto.Course> com.yyh.controller.MyController.queryCourse(int)
+23:45:04.858 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+23:45:04.859 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+23:45:04.897 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:45:04.897 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:45:04.930 INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+23:45:05.116 INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+23:45:05.132 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:45:05.159 INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+23:45:05.188 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+23:45:05.192 INFO  com.yyh.AppDemoMain - Started AppDemoMain in 3.698 seconds (JVM running for 5.331)
+23:45:21.362 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+23:45:21.362 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+23:45:21.380 INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+23:45:21.446 INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 10, acquireRetryDelay -> 500, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge75o9ug17crk19q6wvf|3d9fc57a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge75o9ug17crk19q6wvf|3d9fc57a, idleConnectionTestPeriod -> 0, initialPoolSize -> 5, jdbcUrl -> jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
