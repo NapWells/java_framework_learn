@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yyh.mapper.ClResourceMapper">
+  <resultMap id="BaseResultMap" type="com.yyh.model.ClResource">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pattern" jdbcType="VARCHAR" property="pattern" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, name, pattern
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_resource
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_resource
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.yyh.model.ClResource">
+    insert into sys_resource (id, name, pattern
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pattern,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.yyh.model.ClResource">
+    insert into sys_resource
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="pattern != null">
+        pattern,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pattern != null">
+        #{pattern,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yyh.model.ClResource">
+    update sys_resource
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pattern != null">
+        pattern = #{pattern,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yyh.model.ClResource">
+    update sys_resource
+    set name = #{name,jdbcType=VARCHAR},
+      pattern = #{pattern,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectResourceByPermissionId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT
+      sys_resource.*
+    FROM
+      sys_permission
+          LEFT JOIN
+      sys_permission_resource ON sys_permission.id = sys_permission_resource.permission_id
+          LEFT JOIN
+      sys_resource ON sys_permission_resource.resource_id = sys_resource.id
+    where sys_permission.id = #{permissionId,jdbcType=INTEGER};
+  </select>
+</mapper>

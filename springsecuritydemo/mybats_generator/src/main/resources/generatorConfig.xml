@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- 数据库驱动 -->
+	<!-- <classPathEntry location="mysql-connector-java-5.1.40-bin.jar" /> -->
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库链接URL，用户名、密码 -->
+		<!-- 
+			connectionURL="jdbc:mysql://220.194.237.44/vlink_hdj1" userId="root"
+			password="aee77916c27e5cd48fb2f27051750e51">
+		 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/spring_security_demo2?characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=UTC" userId="root"
+			password="123456">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!-- 生成模型的包名和位置 -->
+		<javaModelGenerator targetPackage="com.yyh.domain"
+			targetProject="C:\java_framework_learn\springsecuritydemo\mybats_generator\src\main\java\">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="false" />
+		</javaModelGenerator>
+		<!-- 生成映射文件的包名和位置 -->
+		<sqlMapGenerator targetPackage="com.test"
+			targetProject="C:\java_framework_learn\springsecuritydemo\mybats_generator\src\main\java\">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!-- 生成DAO的包名和位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.yyh.mapper" targetProject="C:\java_framework_learn\springsecuritydemo\mybats_generator\src\main\java\">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		 <!--要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名 -->
+
+
+		<table tableName="cl_sort_risk_log" domainObjectName="ClSortRiskLog" enableCountByExample="false"
+			   enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+			   selectByExampleQueryId="false">
+
+			<columnOverride column="req_params" javaType ="java.lang.String" jdbcType="LONGTEXT"/>
+			<columnOverride column="response" javaType ="java.lang.String" jdbcType="LONGTEXT"/>
+
+		</table>
+
+
+	</context>
+</generatorConfiguration>  
