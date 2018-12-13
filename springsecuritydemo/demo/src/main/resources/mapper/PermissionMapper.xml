@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yyh.mapper.PermissionMapper">
     <resultMap id="BaseResultMap" type="com.yyh.model.Permission">
-        <id column="id" jdbcType="BIGINT" property="id" />
-        <result column="name" jdbcType="VARCHAR" property="name" />
-        <result column="description" jdbcType="VARCHAR" property="description" />
-        <result column="url" jdbcType="VARCHAR" property="url" />
-        <result column="pid" jdbcType="BIGINT" property="pid" />
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="pid" jdbcType="BIGINT" property="pid"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -15,7 +15,7 @@
 
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from sys_permission
         where id = #{id,jdbcType=BIGINT}
     </select>
@@ -116,11 +116,23 @@
       LEFT JOIN
         sys_permission ON sys_permission_role.permission_id = sys_permission.id
       WHERE
-        sys_user.id = #{id,jdbcType=BIGINT}
+        sys_user.id = #{id,jdbcType=BIGINT} and sys_permission.id is not null
     </select>
 
     <select id="countPermission" resultType="java.lang.Integer">
         select count(*) from sys_permission;
+    </select>
+
+    <select id="findByResourceId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT
+      sys_permission.*
+    FROM
+      sys_permission
+          LEFT JOIN
+      sys_permission_resource ON sys_permission.id = sys_permission_resource.permission_id
+          LEFT JOIN
+      sys_resource ON sys_permission_resource.resource_id = sys_resource.id
+    where sys_resource.id =  #{resourceId,jdbcType=BIGINT};
     </select>
 
 </mapper>

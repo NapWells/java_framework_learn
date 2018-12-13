@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 public class Permission {
-    private int id;
+    private Integer id;
     //权限名称
     private String name;
 
@@ -21,5 +21,5 @@ public class Permission {
     private String url;
 
     //父节点id
-    private int pid;
+    private Integer pid;
 }

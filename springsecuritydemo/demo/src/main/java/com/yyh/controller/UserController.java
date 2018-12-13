@@ -1,15 +1,11 @@
 package com.yyh.controller;
 
-import com.yyh.mapper.ClUserMapper;
-import com.yyh.model.ClUser;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.alibaba.fastjson.JSONObject;
 
-import javax.annotation.Resource;
 
 /**
  * @author lhy
@@ -18,7 +14,6 @@ import javax.annotation.Resource;
  * @Description TODO
  */
 @Controller
-@RequestMapping("/web")
 public class UserController {
 
     @GetMapping("/loginSuccess")
@@ -33,7 +28,12 @@ public class UserController {
 
     @GetMapping({"/","/index"})
     public String index(){
-        return "index";
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication instanceof AnonymousAuthenticationToken){
+            return "index";
+        }else {
+            return "home";
+        }
     }
 
     @GetMapping("/accessDenied")

@@ -30,4 +30,6 @@ public interface PermissionMapper{
     List<Permission> findByAdminUserId(int userId);
 
     int countPermission();
+
+    List<Permission> findByResourceId(int resourceId);
 }

@@ -80,4 +80,8 @@
       sys_resource ON sys_permission_resource.resource_id = sys_resource.id
     where sys_permission.id = #{permissionId,jdbcType=INTEGER};
   </select>
+
+  <select id="findAll" resultMap="BaseResultMap">
+    select * from sys_resource;
+  </select>
 </mapper>

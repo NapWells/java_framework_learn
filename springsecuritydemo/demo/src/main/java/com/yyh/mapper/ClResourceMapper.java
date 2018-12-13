@@ -19,4 +19,6 @@ public interface ClResourceMapper {
     int updateByPrimaryKey(ClResource record);
 
     List<ClResource> selectResourceByPermissionId(Integer permissionId);
+
+    List<ClResource> findAll();
 }
